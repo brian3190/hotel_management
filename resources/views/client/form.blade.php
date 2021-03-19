@@ -9,13 +9,13 @@
             <label>Title</label>
             <select name="title">
               @foreach($titles as $title)
-                          <option value="{{ $title }}" selected="selected">{{ $title }}.</option>
+                          <option value="{{ $title }}">{{ $title }}.</option>
               @endforeach
               </select>
           </div>
           <div class="medium-4  columns">
             <label>Name</label>
-            <input name="name" type="text" value="{{ old( 'name' )}}">
+            <input name="first_name" type="text" value="{{ old( 'first_name' )}}">
             <small class="error">{{$errors->first('name')}}</small>
           </div>
           <div class="medium-4  columns">

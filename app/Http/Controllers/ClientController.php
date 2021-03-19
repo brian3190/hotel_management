@@ -24,7 +24,7 @@ class ClientController extends Controller
         $obj = new \stdClass;
         $obj->id = 1;
         $obj->title = 'mr';
-        $obj->name = 'john';
+        $obj->first_name = 'john';
         $obj->last_name = 'doe';
         $obj->email = 'john@domain.com';
         $data['clients'][] = $obj;
@@ -32,19 +32,19 @@ class ClientController extends Controller
         $obj = new \stdClass;
         $obj->id = 2;
         $obj->title = 'ms';
-        $obj->name = 'jane';
+        $obj->first_name = 'jane';
         $obj->last_name = 'doe';
         $obj->email = 'jane@another-domain.com';
         $data['clients'][] = $obj;
         return view('client/index', $data);
     }
 
-    public function newClient(Request $request)
+    public function newclient(Request $request)
     {
         $data = [];
         
         $data['title'] = $request->input('title');
-        $data['name'] = $request->input('name');
+        $data['first_name'] = $request->input('first_name');
         $data['last_name'] = $request->input('last_name');
         $data['address'] = $request->input('address');
         $data['zip_code'] = $request->input('zip_code');
@@ -61,7 +61,7 @@ class ClientController extends Controller
             $this->validate(
                 $request,
                 [
-                    'name' => 'required|min:3',
+                    'first_name' => 'required|min:3',
                     'last_name' => 'required',
                     'address' => 'required',
                     'zip_code' => 'required',
