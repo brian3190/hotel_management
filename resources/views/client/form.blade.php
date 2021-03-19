@@ -16,7 +16,7 @@
           <div class="medium-4  columns">
             <label>Name</label>
             <input name="first_name" type="text" value="{{ old( 'first_name' )}}">
-            <small class="error">{{$errors->first('name')}}</small>
+            <small class="error">{{$errors->first('first_name')}}</small>
           </div>
           <div class="medium-4  columns">
             <label>Last Name</label>
