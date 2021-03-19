@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\ContentsController@home')->name('home');
 Route::get('/clients', 'App\Http\Controllers\ClientController@index')->name('clients');
-Route::get('/clients/new', 'App\Http\Controllers\ClientController@newclient')->name('new_client');
-Route::post('/clients/new', 'App\Http\Controllers\ClientController@create')->name('create_client');
+Route::get('/clients/new', 'App\Http\Controllers\ClientController@newClient')->name('new_client');
+Route::post('/clients/new', 'App\Http\Controllers\ClientController@newClient')->name('create_client');
 Route::get('/clients/{client_id}', 'App\Http\Controllers\ClientController@show')->name('show_client');
 Route::post('/clients/{client_id}', 'App\Http\Controllers\ClientController@modify')->name('update_client');
 
